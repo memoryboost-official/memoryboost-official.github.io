@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>memoryboost</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+<body id="body">
+    <div class="title">
+        <h1 class="title__main">memoryboost</h1>
+        <h2 class="title__subtitle">Rev up your memory</h2>
+    </div>
+    <div id="container" class="container">
+        <div class="button-box">
+            <div id="button"></div>
+            <button type="button" class="toggle-button login-toggle"
+                    onclick="chooseLogin()">Log in</button>
+            <button type="button" class="toggle-button register-toggle"
+                    onclick="chooseRegister()">Register</button>
+        </div>
+        <!--LOG IN-->
+            <form id="login" class="formular" onsubmit="return login()">
+                <h2>Log in</h2>
+                <div class="input-group">
+                    <input id="logUserName" type="text" maxlength="20" required/>
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input id="logUserPw" type="password" required/>
+                    <label>Password</label>
+                </div>
+                <button class="log-in-button" type="submit">Log in</button>
+            </form>
+        <!--REGISTER-->
+            <form id="register" class="formular" onsubmit="register()">
+                <h2>Register</h2>
+                <div class="input-group">
+                    <input id="regUserName" type="text" maxlength="20" required/>
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input id="regUserPw" type="password" required oninput="validate()"/>
+                    <label>Password</label>
+                </div>
+                <div class="input-group">
+                    <input id="regUserPwRep" type="password" required/>
+                    <label>Password</label>
+                </div>
+                <button class="register-button" type="submit">Register</button>
+                <div class="requirements">
+                    <ul>
+                        <li id="upper">At least 1 uppercase</li>
+                        <li id="lower">At least 1 lowercase</li>
+                        <li id="special">At least 1 special symbol</li>
+                        <li id="number">At least 1 number</li>
+                        <li id="length">At least 8 characters</li>
+                    </ul>
+                </div>
+            </form>
+    </div>
+    <input type="file" id="userJSON" accept="application/json">
+    <label for="userJSON" id="addUserButton">Add existing user</label>
+    <script type="text/javascript" src="script/login_register.js"></script>
+</body>
+</html>

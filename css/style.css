@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --primary-color: #2A2D34;
+    --secondary-color: #383d44;
+    --tertiary-color: #037971;
+    --quinary-color: #434950;
+    --primary-text-color: #e7ecef;
+    --secondary-text-color: #026C7C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    color: var(--primary-text-color);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    background: var(--primary-color);
+}
+
+.title{
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.title__subtitle{
+    color: var(--secondary-text-color);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.container{
+    position: relative;
+    margin: 30px;
+    width: 300px;
+    height: 360px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+    padding: 10px;
+    overflow:hidden;
+    transition: 0.3s;
+}
+
+/*login/register toggle-buttons background*/
+.button-box{
+    width: 220px;
+    height: 30px;
+    margin: 10px auto;
+    position: relative;
+    background-color: var(--quinary-color);
+    border-radius: 15px;
+    /*to remove blank space between buttons*/
+    font-size: 0;
+}
+
+/*login/register toggle-buttons*/
+.toggle-button{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border:0;
+    outline: none;
+}
+/*toggle-button*/
+#button{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: var(--tertiary-color);
+    transition: 0.3s;
+}
+
+/*"Log in" and "Register" titles*/
+.container h2{
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*form and align of login/register formular*/
+.formular{
+    position: absolute;
+    top:75px;
+    transition: 0.3s;
+}
+
+/*form and align of login formular*/
+#login{
+    left:45px;
+}
+
+/*form and align of register formular*/
+#register{
+    left:345px;
+}
+
+/*input and label of input*/
+.input-group{
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-text-color);
+    position: relative;
+}
+
+.input-adduser-group{
+
+}
+
+/*label of input*/
+.input-group label{
+    position: absolute;
+    top:50%;
+    left:2px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: rgba(231, 236, 239, 0.7);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/*input*/
+.input-group input {
+    width: 200px;
+    height: 30px;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/*happens if user is typing*/
+.input-group input:focus~label{
+    top:-5px;
+}
+/*stays after user typed something*/
+.input-group input:valid~label{
+    top:-5px;
+}
+
+/*design for bottom register and login button*/
+.register-button, .log-in-button{
+    width: 100%;
+    height: 30px;
+    margin: 5px;
+    font-size: 1rem;
+    background-color: var(--tertiary-color);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.requirements{
+    margin-top: 20px;
+}
+
+@media (width < 500px){
+    .title{
+        font-size: 1.6rem;
+    }
+    body{
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+#userJSON{
+    display: none;
+}
+
+#addUserButton{
+    padding: 8px;
+    font-size: 1rem;
+    background-color: var(--tertiary-color);
+    border-radius: 15px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Flashcards</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div class="topBarFlashScreen">
+        <h1 id="title">memoryboost</h1>
+        <h2 id="currentUser">this is the current user</h2>
+        <!--Logout muss noch implementiert werden-->
+        <button type="button" id="logout-button" onclick="logout()">logout</button>
+    </div>
+    <form class="create-card-container" onsubmit="return insertNewCard()">
+        <div class="question-wrapper">
+            <label>Question</label>
+            <input type="text" placeholder="What is the capitol of the US?" class="input-field"
+                   id="questionInsert" maxlength="70" onfocus="this.value=''" required >
+        </div>
+        <div class="answer-wrapper">
+            <label>Answer</label>
+            <input type="text" placeholder="Washington D.C" class="input-field" id="answerInsert"
+                   maxlength="144" onfocus="this.value=''" required>
+        </div>
+        <button type="submit" class="insert-button">Insert</button>
+    </form>
+    <div class="cards-container"> <!--used for container query-->
+        <div class="grid-cards">
+
+        </div>
+    </div>
+    <script src="script/main.js"></script>
+</body>
+</html>
